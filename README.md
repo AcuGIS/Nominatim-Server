@@ -46,4 +46,8 @@ Usage is:
 ./reload-OpenNameSearch.sh [PBF_URL1] [PBF_URL2] ...
 </code>
 
-
+####  Ena##Eana
+The script creates an updater service.  In order to enable updates:
+<code>
+chmod +x /etc/init.d/nominatim_updater ?
+</code>
