@@ -49,6 +49,7 @@ Usage is:
 ## Enable Automatic Updates
 
 The script creates an updater service.  In order to enable updates:
+
 <code>
 chmod +x /etc/init.d/nominatim_updater
 </code>
