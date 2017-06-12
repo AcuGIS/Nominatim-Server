@@ -35,5 +35,13 @@ You should see a page as below:
 ![installation complete](http://opennamesearch.org/assets/img/Nominatim-Welcome.jpg)
 
 
+## Loading Additional PBFs, Multiplie PBFs, or Replacing Existing PBFs:
+
+You can use our reload-OpenNameSearch.sh script via GitHUB script.
+
+Usage is:
+<code>	
+./reload-OpenNameSearch.sh [PBF_URL1] [PBF_URL2] ...
+</code>
 
 
