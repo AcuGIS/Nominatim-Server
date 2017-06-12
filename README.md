@@ -30,7 +30,7 @@ Load Delware data:
 
 ## Welcome Page
 
-Once installation completes, navigate to the IP/Nominatim or hostname/Nominatim on your server.
+Once installation completes, navigate to the IP/nominatim or hostname/nominatim on your server.
 
 You should see a page as below:
 
