@@ -1,5 +1,7 @@
 # OpenNameSearch (Beta)
 
+Live <a href="https://dc.acugis.com" target="_blank"> Demo </a>
+
 This script is for building a basic Nominatim server with OpenStreetMap data.
 
 Only for use on a clean Ubuntu 14!
