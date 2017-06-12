@@ -12,7 +12,7 @@ Step 1: Get the OpenNameSearch.sh script from GitHub
 
 Step 2: Make it executable:
 
-<code>chmod 755 OpenNameSearch</code>
+<code>chmod 755 OpenNameSearch.sh</code>
 
 Step 3: Run the script
 
