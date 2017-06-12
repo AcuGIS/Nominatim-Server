@@ -6,7 +6,7 @@ This script is for building a basic Nominatim server with OpenStreetMap data.
 
 Only for use on a clean Ubuntu 14!
 
-Before proceeding, see <a href="opennamesearch.org" target="blank"> OpenNameSearch.org </a> for limitations, etc..
+Before proceeding, see <a href="http://opennamesearch.org" target="blank"> OpenNameSearch.org </a> for limitations, etc..
 
 Step 1: Get the OpenNameSearch.sh script from GitHub
 
