@@ -1,4 +1,4 @@
-# OpenNameSearch (Beta)
+# OpenNameSearch
 
 Live <a href="https://dc.acugis.com" target="_blank"> Demo </a>
 
