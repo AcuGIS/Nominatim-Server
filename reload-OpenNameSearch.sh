@@ -37,7 +37,7 @@ function import_osm_data(){
 	NP=$(grep -c 'model name' /proc/cpuinfo)
 	let C_MEM=$(free -m | grep -i 'mem:' | sed 's/[ \t]\+/ /g' | cut -f4,7 -d' ' | tr ' ' '+')-200
 	su - ${NM_USER} <<EOF
-cd /home/${NM_USER}/nominatim-${NM_VER}
+cd /home/${NM_USER}/Nominatim-${NM_VER}
 dropdb nominatim
 ./utils/setup.php --osm-file ${PBF_FILE} --all --osm2pgsql-cache ${C_MEM} 2>&1 | tee setup.log
 exit 0
