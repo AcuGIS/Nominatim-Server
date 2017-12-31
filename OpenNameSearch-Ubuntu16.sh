@@ -82,12 +82,12 @@ function install_nominatim(){
     git clone --recursive https://github.com/openstreetmap/Nominatim.git
 
     #compile
-    chown -R ${NM_USER}:${NM_USER} Nominatim
     cd Nominatim
     mkdir build
     cd build
     cmake ..
     make
+    chown -R ${NM_USER}:${NM_USER} /home/${NM_USER}/Nominatim
 
     #customize
     UPDATE_URL="$(echo ${PBF_URL} | sed 's/latest.osm.pbf/updates/')"
