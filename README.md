@@ -6,6 +6,10 @@ Only for use on a clean Ubuntu 14!
 
 Before proceeding, see <a href="http://opennamesearch.org" target="blank"> OpenNameSearch.org </a> for limitations, etc..
 
+An Ubuntu 16 version has been contributed by @f1ana:
+
+https://github.com/f1ana
+
 Step 1: Get the OpenNameSearch.sh script from GitHub
 
 Step 2: Make it executable:
