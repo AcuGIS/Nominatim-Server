@@ -56,6 +56,8 @@ The script creates an updater service.  In order to enable updates:
 chmod +x /etc/init.d/nominatim_updater
 </code>
 
+
+
 [Produced by AcuGIS. We Make GIS Simple](https://www.acugis.com) 
 
 [Cited, Inc. Wilmington, Delaware](https://citedcorp.com)
