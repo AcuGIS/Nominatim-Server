@@ -38,6 +38,10 @@ You should see a page as below:
 
 ![installation complete](http://opennamesearch.org/assets/img/Nominatim-Welcome.jpg)
 
+[Produced by AcuGIS. We Make GIS Simple](https://www.acugis.com) 
+
+[Cited, Inc. Wilmington, Delaware](https://citedcorp.com)
+
 
 ## Loading Additional PBFs, Multiplie PBFs, or Replacing Existing PBFs:
 
