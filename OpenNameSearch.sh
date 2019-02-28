@@ -179,7 +179,8 @@ function import_osm_data(){
 	fi
  
 	NP=$(grep -c 'model name' /proc/cpuinfo)
-	let C_MEM=$(free -m | grep -i 'mem:' | sed 's/[ \t]\+/ /g' | cut -f4,7 -d' ' | tr ' ' '+')-200
+	let AVAIL_MEM=$(free -m | grep -i 'mem:' | sed 's/[ \t]\+/ /g' | cut -f4,7 -d' ' | tr ' ' '+')
+	let C_MEM=(AVAIL_MEM/4)*3
 	su - ${NM_USER} <<EOF
 cd /home/${NM_USER}/Nominatim-${NM_VER}
 ./utils/setup.php --osm-file ${PBF_FILE} --all --osm2pgsql-cache ${C_MEM} 2>&1 | tee setup.log
