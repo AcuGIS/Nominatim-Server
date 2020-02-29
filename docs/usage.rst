@@ -2,12 +2,11 @@
 Usage
 ========
 
-Tile urls have the form 'http://host/osm_tiles/{z}/{x}/{y}.png'::
+pbf_url: Complete PBF url from GeoFarbrik::
 
 
 
-	http://192.83.58.10/osm_data/{z}/{x}/{y}.png
+	./OpenNameSearch.sh pbf_url
 
-	http://domain.com/osm_data/{z}/{x}/{y}.png
 
 	
