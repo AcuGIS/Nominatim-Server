@@ -4,7 +4,7 @@ Intro
 Overview
 ------------
 
-This script is for building a basic tile server with OpenStreetMap data ::
+This script is for building a basic Nominatim server with OpenStreetMap data ::
 
 
 Authors
@@ -32,9 +32,6 @@ http://www.postgresql.org/
 
 http://postgis.net/
 
-https://github.com/gravitystorm/openstreetmap-carto
-
-https://github.com/mapbox/osm-bright
 
 
 
