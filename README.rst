@@ -23,20 +23,12 @@ Step 2: Make it executable:
 
 Step 3: Run the script
 
-Usage
-------------
-
-pbf_url: Complete PBF url from GeoFarbrik
-  
-	./OpenNameSearch.sh  pbf_url
-
-
 Examples
 ------------
 
-Load Delware data:
+Load Delware data::
 
-<code>./OpenNameSearch.sh http://download.geofabrik.de/north-america/us/delaware-latest.osm.pbf </code>
+	./OpenNameSearch.sh http://download.geofabrik.de/north-america/us/delaware-latest.osm.pbf
 
 Welcome Page
 ------------
@@ -53,19 +45,18 @@ Loading and Reloading PBFs
 
 You can use our reload-OpenNameSearch.sh script via GitHUB script.
 
-Usage is:
-<code>	
-./reload-OpenNameSearch.sh [PBF_URL1] [PBF_URL2] ...
-</code>
+Usage is::
+
+	./reload-OpenNameSearch.sh [PBF_URL1] [PBF_URL2] ...
+
 
 Enable Automatic Updates
 ------------------------
 
-The script creates an updater service.  In order to enable updates:
+The script creates an updater service.  In order to enable updates::
 
-<code>
-chmod +x /etc/init.d/nominatim_updater
-</code>
+	chmod +x /etc/init.d/nominatim_updater
+
 
 Credits
 -------
