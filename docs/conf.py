@@ -43,7 +43,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'OpenTileServer'
+project = u'OpenNameSearch'
 copyright = u'2020, Cited, Inc.'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -226,7 +226,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'readthedocstemplate', u'Read the Docs Template Documentation',
+    ('index', 'OpenNameSearch', u'OpenNameSearch',
      [u'Read the Docs'], 1)
 ]
 
@@ -240,8 +240,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'ReadtheDocsTemplate', u'Read the Docs Template Documentation',
-   u'Read the Docs', 'ReadtheDocsTemplate', 'One line description of project.',
+  ('index', 'OpenNameSearch', u'OpenNameSearch',
+   u'OpenNameSearch', 'OpenNameSearch', 'OpenNameSearch.',
    'Miscellaneous'),
 ]
 
