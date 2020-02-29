@@ -36,12 +36,13 @@ Step 2: Make it executable:
 
 Step 3: Run the script
 
-Script usage
+Usage
 ------------
 
-<code>./OpenNameSearch.sh  pbf_url</code>
-
 pbf_url: Complete PBF url from GeoFarbrik
+  
+	./OpenNameSearch.sh  pbf_url
+
 
 Examples
 ------------
@@ -60,8 +61,8 @@ You should see a page as below:
 ![installation complete](http://opennamesearch.org/assets/img/Nominatim-Welcome.jpg)
 
 
-Loading Additional PBFs, Multiplie PBFs, or Replacing Existing PBFs
--------------------------------------------------------------------
+Loading and Reloading PBFs
+--------------------------
 
 You can use our reload-OpenNameSearch.sh script via GitHUB script.
 
