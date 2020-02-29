@@ -1,5 +1,5 @@
-# OpenNameSearch
-
+OpenNameSearch
+===========================
 This script is for building a basic Nominatim server with OpenStreetMap data.
 
 Only for use on a clean Ubuntu 14!
@@ -9,19 +9,6 @@ Before proceeding, see <a href="http://opennamesearch.org" target="blank"> OpenN
 An Ubuntu 16 version has been contributed by @f1ana: https://github.com/f1ana
 
 https://github.com/AcuGIS/OpenNameSearch/blob/master/OpenNameSearch-Ubuntu16.sh
-
-
-Features
---------
-
-- Load OSM Data
-- Load OSM data (city, country, continent or planet).
-- Postgres, PostGIS, and osm2pgsql
-- Installs Postgres, PostGIS, and osm2pgsql.
-- Installs and configures Apache for http or https
-- Mapnik, mod_tile, and renderd
-- OSM-carto or OSM-bright
-- OpenLayer and Leaflet example page.
 
 
 Installation
