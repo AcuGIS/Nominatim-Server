@@ -15,13 +15,17 @@ Installation
 ------------
 
 
-Step 1: Get the OpenNameSearch.sh script from GitHub
+Step 1: Get the OpenNameSearch.sh script from GitHub::
 
-Step 2: Make it executable:
+	https://github.com/AcuGIS/OpenNameSearch/blob/master/OpenNameSearch-Ubuntu16.sh
 
-<code>chmod 755 OpenNameSearch.sh</code>
+Step 2: Make it executable::
 
-Step 3: Run the script
+	chmod 755 OpenNameSearch.sh
+
+Step 3: Run the script::
+
+	./OpenNameSearch pbf_url
 
 Examples
 ------------
@@ -37,7 +41,7 @@ Once installation completes, navigate to the IP/nominatim or hostname/nominatim 
 
 You should see a page as below:
 
-![installation complete](http://opennamesearch.org/assets/img/Nominatim-Welcome.jpg)
+http://opennamesearch.org/assets/img/Nominatim-Welcome.jpg
 
 
 Loading and Reloading PBFs
@@ -61,9 +65,9 @@ The script creates an updater service.  In order to enable updates::
 Credits
 -------
 
-[Produced by AcuGIS. We Make GIS Simple](https://www.acugis.com) 
+https://www.acugis.com
 
-[Cited, Inc. Wilmington, Delaware](https://citedcorp.com)
+https://citedcorp.com
 
 
 Contribute
