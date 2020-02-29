@@ -41,7 +41,7 @@ Once installation completes, navigate to the IP/nominatim or hostname/nominatim 
 
 You should see a page as below:
 
-http://opennamesearch.org/assets/img/Nominatim-Welcome.jpg
+.. image:: http://opennamesearch.org/assets/img/Nominatim-Welcome.jpg
 
 
 Loading and Reloading PBFs
