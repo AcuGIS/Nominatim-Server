@@ -1,5 +1,8 @@
 # OpenNameSearch
 
+* Project page: https://www.acugis.com/opennamesearch
+* Documentation: https://opennamesearch.docs.acugis.com/
+
 [![Documentation Status](https://readthedocs.org/projects/opennamesearch/badge/?version=latest)](https://opennamesearch.docs.acugis.com/en/latest/?badge=latest)
 
 This script is for building a basic Nominatim server with OpenStreetMap data.
