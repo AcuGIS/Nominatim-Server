@@ -1,7 +1,7 @@
 # OpenNameSearch
 
 * Project page: https://www.acugis.com/opennamesearch
-* Documentation: https://opennamesearch.docs.acugis.com/
+* Documentation: https://www.acugis.com/opennamesearch/docs/
 
 [![Documentation Status](https://readthedocs.org/projects/opennamesearch/badge/?version=latest)](https://opennamesearch.docs.acugis.com/en/latest/?badge=latest)
 
