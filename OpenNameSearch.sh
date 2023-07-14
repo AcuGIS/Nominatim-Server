@@ -9,7 +9,7 @@
 
 PBF_URL="${1}";	#get URL from first parameter, http://download.geofabrik.de/europe/germany-latest.osm.pbf
 
-PROJECT_NAME=$(echo "${PBF_URL}" | rev | cut -f1 -d/ | rev | cut -f1 -d'-')
+PROJECT_NAME='nominatim'
 
 NM_USER='ntim';	#nominatim website
 NM_PG_PASS=$(< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c32);
