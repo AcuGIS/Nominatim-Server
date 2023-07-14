@@ -22,7 +22,7 @@ function import_osm_data(){
 			
 			UPDATE_URL="$(echo ${PBF_URL} | sed 's/latest.osm.pbf/updates/')"
 				
-			sed -i.save "s|NOMINATIM_REPLICATION_URL=|NOMINATIM_REPLICATION_URL=\"${UPDATE_URL}\"|" .env
+			sed -i.save "s|NOMINATIM_REPLICATION_URL=.*|NOMINATIM_REPLICATION_URL=\"${UPDATE_URL}\"|" .env
 
 			NP=$(grep -c 'model name' /proc/cpuinfo)
 			let AVAIL_MEM=$(free -m | grep -i 'mem:' | sed 's/[ \t]\+/ /g' | cut -f4,7 -d' ' | tr ' ' '+')
