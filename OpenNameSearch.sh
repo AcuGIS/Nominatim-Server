@@ -234,9 +234,6 @@ StandardError=append:/var/log/nominatim-updates.error.log
 [Install]
 WantedBy=multi-user.target
 EOF
-
-    systemctl enable nominatim-updates.service
-    systemctl start nominatim-updates.service
 }
 
 function install_housenumber(){
