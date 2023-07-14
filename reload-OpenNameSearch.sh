@@ -42,11 +42,19 @@ EOF
 	chown -R www-data:www-data /var/www/${PROJECT_NAME}
 }
  
+function init_nm_updates(){
+ 
+	 pushd /home/${NM_USER}
+		 nominatim replication --init
+	 popd
+}
+ 
 #################################
 
 systemctl stop nominatim-updates apache2
 rm -rf /var/www/${PROJECT_NAME}
   
 import_osm_data;
+init_nm_updates;
 
 systemctl start nominatim-updates apache2

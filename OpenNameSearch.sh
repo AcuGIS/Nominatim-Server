@@ -213,6 +213,10 @@ EOF
 
 function enable_nm_updates(){
 	
+		pushd /home/${NM_USER}
+			nominatim replication --init
+		popd
+	
     cat >/etc/systemd/system/nominatim-updates.service <<EOF
 [Unit]
 Description=Nominatum Updates
