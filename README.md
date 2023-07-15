@@ -1,5 +1,7 @@
 # OpenNameSearch
 
+![OpenNameSearch](docs/OpenNameSearch-Main.png)
+
 * Project page: https://www.acugis.com/opennamesearch
 * Documentation: https://www.acugis.com/opennamesearch/docs/
 
@@ -37,11 +39,15 @@ Load Delware data:
 
 ## Welcome Page
 
-Once installation completes, navigate to the IP/nominatim or hostname/nominatim on your server.
+Once installation completes, navigate to the IP or hostname on your server.
 
 You should see a page as below:
 
-![installation complete](http://opennamesearch.org/assets/img/Nominatim-Welcome.jpg)
+![installation complete](docs/OpenNameSearch-Main.png)
+
+Click Search to start a search:
+
+![Search Function](docs/OpenNameSearch-Search.png)
 
 
 ## Loading Additional PBFs, Multiplie PBFs, or Replacing Existing PBFs:
