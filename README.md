@@ -31,11 +31,10 @@ The pbf_url is the complete PBF url from GeoFarbrik
 
 ## Examples:
 
-Load Andorra data (one of the smallest data sets, good for testing):
+Load Andorra data from GeoFabrik (one of the smallest data sets, good for testing):
 
-      ./OpenNameSearch.sh https://download.geofabrik.de/europe/isle-of-man-latest.osm.pbf
-)
-)
+      ./OpenNameSearch.sh https://download.geofabrik.de/europe/andorra-latest.osm.pbf
+
 
 ## Welcome Page
 
