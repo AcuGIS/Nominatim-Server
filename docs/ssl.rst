@@ -1,8 +1,37 @@
 Enable SSL
 ===========================
 
+Check Hostname
+---------------
+
+Be sure that your server hostname is properly set.
+
+While you can use Nominatim with only an IP address, if you wish to use SSL, be sure to set the hostname.
+
+You can check using the 'hostname' command
+
+.. code-block:: console
+   
+   root@suite:~# hostname
+   server1
+
+If the full hostname is not set, use hostnamectl to set the full hostname:
+
+.. code-block:: console
+
+   root@suite:~# hostnamectl set-hostname server1.domain.com
+
+Use the hostname command to verify the full hostname is now set:
+
+.. code-block:: console
+
+   root@suite:~# hostname
+   server1.domain.com
+
+
 Get Certificate
 ---------------
+
 
 In order to provision SSL for your instance, follow below:
 
