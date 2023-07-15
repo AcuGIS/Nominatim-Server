@@ -6,7 +6,7 @@
 OpenNameSearch
 ==================================================
 
-.. image:: https://opentileserver.org/assets/img/ons.gif
+.. image:: OpenNameSearch-Main.png
 
 Contents:
 
