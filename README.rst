@@ -11,7 +11,7 @@ Installation
 
 Step 1: Get the OpenNameSearch.sh script from GitHub::
 
-	https://github.com/AcuGIS/OpenNameSearch/blob/master/OpenNameSearch-Ubuntu16.sh
+	wget https://raw.githubusercontent.com/AcuGIS/OpenNameSearch/master/OpenNameSearch.sh
 
 Step 2: Make it executable::
 
