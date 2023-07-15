@@ -2,13 +2,7 @@ OpenNameSearch
 ===========================
 This script is for building a basic Nominatim server with OpenStreetMap data.
 
-Only for use on a clean Ubuntu 14!
-
-Before proceeding, see http://opennamesearch.org for limitations, etc..
-
-An Ubuntu 16 version has been contributed by @f1ana: https://github.com/f1ana
-
-https://github.com/AcuGIS/OpenNameSearch/blob/master/OpenNameSearch-Ubuntu16.sh
+Only for use on a clean Ubuntu 22!
 
 
 Installation
@@ -41,7 +35,7 @@ Once installation completes, navigate to the IP/nominatim or hostname/nominatim 
 
 You should see a page as below:
 
-.. image:: http://opennamesearch.org/assets/img/Nominatim-Welcome.jpg
+.. image:: docs/OpenNameSearch-Main.png
 
 
 Loading and Reloading PBFs
