@@ -7,29 +7,27 @@
 
 [![Documentation Status](https://readthedocs.org/projects/opennamesearch/badge/?version=latest)](https://opennamesearch.docs.acugis.com/en/latest/?badge=latest)
 
-This script is for building a basic Nominatim server with OpenStreetMap data.
+This script is for building a Nominatim server with OpenStreetMap data.
 
-Only for use on a clean Ubuntu 14!
-
-Before proceeding, see <a href="http://opennamesearch.org" target="blank"> OpenNameSearch.org </a> for limitations, etc..
-
-An Ubuntu 16 version has been contributed by @f1ana: https://github.com/f1ana
-
-https://github.com/AcuGIS/OpenNameSearch/blob/master/OpenNameSearch-Ubuntu16.sh
+Only for use on a clean Ubuntu 22!
 
 Step 1: Get the OpenNameSearch.sh script from GitHub
 
+      wget https://raw.githubusercontent.com/AcuGIS/OpenNameSearch/master/OpenNameSearch.sh
+
 Step 2: Make it executable:
 
-<code>chmod 755 OpenNameSearch.sh</code>
+    chmod 755 OpenNameSearch.sh
 
 Step 3: Run the script
 
 ## Script usage:
 
-<code>./OpenNameSearch.sh  pbf_url</code>
+The script accepts a PBF url:
 
-pbf_url: Complete PBF url from GeoFarbrik
+    ./OpenNameSearch.sh  pbf_url
+
+The pbf_url is the complete PBF url from GeoFarbrik
 
 ## Examples:
 
