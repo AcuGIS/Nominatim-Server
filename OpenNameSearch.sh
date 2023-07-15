@@ -122,8 +122,20 @@ function install_nominatim_ui(){
 			mv dist/theme/config.theme.js.example dist/theme/config.theme.js
 			sed -i.save "s|Nominatim_Config.Nominatim_API_Endpoint =.*|Nominatim_Config.Nominatim_API_Endpoint = \"http://${HNAME}/nominatim/\"|" dist/theme/config.theme.js
 		popd
-		
-		mv nominatim-ui-${NMUI_VER}/dist/* /var/www/html/
+
+
+		#Add webapp
+  		mv nominatim-ui-${NMUI_VER}/dist/* /var/www/html/
+		rm -f /var/www/html/index.html
+		wget --quiet -P/tmp https://github.com/AcuGIS/OpenNameSearch/archive/refs/heads/master.zip
+		unzip /tmp/master.zip -d/tmp
+		cp -r /tmp/OpenNameSearch-master/app/* /var/www/html/
+		rm -rf /tmp/master.zip
+        	#sed -i.save "s/localhost/${HNAME}/" /var/www/html/leaflet-example.html
+
+
+
+  
 		chown -R www-data:www-data /var/www/html/
 	popd
 }
