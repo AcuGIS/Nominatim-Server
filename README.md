@@ -33,7 +33,9 @@ The pbf_url is the complete PBF url from GeoFarbrik
 
 Load Andorra data (one of the smallest data sets, good for testing):
 
-      ./OpenNameSearch.sh http://download.geofabrik.de/north-america/us/delaware-latest.osm.pbf](https://download.geofabrik.de/europe/andorra-latest.osm.pbf
+      ./OpenNameSearch.sh https://download.geofabrik.de/europe/isle-of-man-latest.osm.pbf
+)
+)
 
 ## Welcome Page
 
