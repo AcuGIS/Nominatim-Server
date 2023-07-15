@@ -14,7 +14,6 @@ OpenNameSearch
 
    intro
    installation
-   usage
    ssl
 
 
