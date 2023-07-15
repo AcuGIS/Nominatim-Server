@@ -1,12 +1,12 @@
-OpenNameSearch
+Installation
 ===========================
 This script is for building a basic Nominatim server with OpenStreetMap data.
 
 Only for use on a clean Ubuntu 22!
 
 
-Installation
-------------
+Running the Script
+------------------
 
 
 Step 1: Get the OpenNameSearch.sh script from GitHub::
@@ -35,14 +35,14 @@ Once installation completes, navigate to the IP or hostname on your server.
 
 You should see a page as below:
 
-.. image:: docs/OpenNameSearch-Main.png
+.. image:: OpenNameSearch-Main.png
 
 
 Click the Search function (or go to domain.com/search.html)
 
 You should see a page as below:
 
-.. image:: docs/OpenNameSearch-Search.png
+.. image:: OpenNameSearch-Search.png
 
 To test functionality, enter below into the Search box::
 
@@ -50,7 +50,7 @@ To test functionality, enter below into the Search box::
 
 Confirm that results are returned
 	
-.. image:: docs/Search-Results.png
+.. image:: Search-Results.png
 
 Loading and Reloading PBFs
 --------------------------
