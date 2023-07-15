@@ -50,7 +50,7 @@ You can use our reload-OpenNameSearch.sh script via GitHUB script.
 
 Usage is:
 <code>	
-./reload-OpenNameSearch.sh [PBF_URL1] [PBF_URL2] ...
+./reload-OpenNameSearch.sh [PBF_URL1] ...
 </code>
 
 ## Enable Automatic Updates
@@ -58,7 +58,8 @@ Usage is:
 The script creates an updater service.  In order to enable updates:
 
 <code>
-chmod +x /etc/init.d/nominatim_updater
+systemctl enable nominatim-updates.service
+systemctl start nominatim-updates.service
 </code>
 
 ## Credits

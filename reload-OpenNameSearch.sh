@@ -1,71 +1,60 @@
 #!/bin/bash -e
-#Version: 1.0.1
 #For use on existing Nominatim Server created via OpenNameSearch.sh
 #Cited, Inc
-#Usage: reload-OpenNameSearch.sh [PBF_URL1] [PBF_URL2] ...
+#Usage: reload-OpenNameSearch.sh [PBF_URL1] ...
 
 #NOTE: Script will drop old nominatim database and import new data.
+
+PBF_URL="${1}";	#get URL from first parameter, https://download.geofabrik.de/europe/liechtenstein-latest.osm.bz2
+
+PROJECT_NAME='nominatim'
  
 NM_USER='ntim';	#nominatim website
-NM_VER='2.5.1'
- 
-#Merge multiple pbf files into one, so we can import into Nominatim
-function merge_osm_maps(){
-	apt-get -y install osmctools
- 
-	COUNTER=$(echo ${PBF_FILES} | wc -w);
-	PIPES=''
-	for f in ${PBF_FILES}; do
-		if [ $COUNTER -eq 1 ]; then
-			PBF_FILE="/home/${NM_USER}/all.pbf"
-			osmconvert ${PIPES} ${f} -o=${PBF_FILE}
-		else
-			mkfifo p${COUNTER}
-			PIPES+="p${COUNTER} "
-			osmconvert ${f} --out-o5m -o=p${COUNTER} &
- 
-			let COUNTER=COUNTER-1
-		fi
-	done
- 
-	chown ${NM_USER}:${NM_USER} ${PBF_FILE}
-	rm ${PIPES}
+
+function import_osm_data(){
+		
+		pushd /home/${NM_USER}
+		
+			#13. Loading data into your server
+			PBF_FILE="/home/${NM_USER}/${PBF_URL##*/}"
+			wget ${PBF_URL}
+			chown ${NM_USER}:${NM_USER} ${PBF_FILE}
+			
+			UPDATE_URL="$(echo ${PBF_URL} | sed 's/latest.osm.pbf/updates/')"
+				
+			sed -i.save "s|NOMINATIM_REPLICATION_URL=.*|NOMINATIM_REPLICATION_URL=\"${UPDATE_URL}\"|" .env
+
+			NP=$(grep -c 'model name' /proc/cpuinfo)
+			let AVAIL_MEM=$(free -m | grep -i 'mem:' | sed 's/[ \t]\+/ /g' | cut -f4,7 -d' ' | tr ' ' '+')
+			let C_MEM=(AVAIL_MEM/4)*3
+			
+			mkdir -p /var/www/${PROJECT_NAME}
+			chown -R ${NM_USER}:${NM_USER} /var/www/${PROJECT_NAME}
+		
+		su - ${NM_USER} <<EOF
+dropdb nominatim
+nominatim import -j ${NP} --osm-file ${PBF_FILE} --osm2pgsql-cache ${C_MEM} --project-dir /var/www/${PROJECT_NAME} 2>&1 | tee /tmp/setup.log
+EOF
+		
+		rm -f ${PDB_FILE}
+	popd
+	
+	chown -R www-data:www-data /var/www/${PROJECT_NAME}
 }
  
-function import_osm_data(){
+function init_nm_updates(){
  
-	NP=$(grep -c 'model name' /proc/cpuinfo)
-	let C_MEM=$(free -m | grep -i 'mem:' | sed 's/[ \t]\+/ /g' | cut -f4,7 -d' ' | tr ' ' '+')-200
-	su - ${NM_USER} <<EOF
-cd /home/${NM_USER}/Nominatim-${NM_VER}
-dropdb nominatim
-./utils/setup.php --osm-file ${PBF_FILE} --all --osm2pgsql-cache ${C_MEM} 2>&1 | tee setup.log
-exit 0
-EOF
- 
-	service apache2 restart
+	 pushd /home/${NM_USER}
+		 nominatim replication --init
+	 popd
 }
  
 #################################
- 
-PBF_FILES=''
- 
-cd /home/${NM_USER}
- 
-#download pbf file/s
-for f in $@; do
-	PBF_URL="$f"
-	PBF_FILE="/home/${NM_USER}/${PBF_URL##*/}"
-	if [ ! -f ${PBF_FILE} ]; then
-		wget ${PBF_URL}
-		chown ${NM_USER}:${NM_USER} ${PBF_FILE}
-	fi
-	PBF_FILES+=" ${PBF_FILE}";
-done
- 
-if [ $# -gt 1 ]; then #if we have more that 1 pbf file
-	merge_osm_maps;
-fi
- 
+
+systemctl stop nominatim-updates apache2
+rm -rf /var/www/${PROJECT_NAME}
+  
 import_osm_data;
-rm ${PBF_FILES}
+init_nm_updates;
+
+systemctl start nominatim-updates apache2
