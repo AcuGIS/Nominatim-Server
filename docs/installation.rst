@@ -1,17 +1,17 @@
-OpenNameSearch
+Installation and Usage
 ===========================
 This script is for building a basic Nominatim server with OpenStreetMap data.
 
 Only for use on a clean Ubuntu 22!
 
 
-Installation
-------------
+Running the Script
+------------------
 
 
 Step 1: Get the OpenNameSearch.sh script from GitHub::
 
-	https://github.com/AcuGIS/OpenNameSearch/blob/master/OpenNameSearch-Ubuntu16.sh
+	wget https://raw.githubusercontent.com/AcuGIS/OpenNameSearch/master/OpenNameSearch.sh
 
 Step 2: Make it executable::
 
@@ -24,19 +24,33 @@ Step 3: Run the script::
 Examples
 ------------
 
-Load Delware data::
+Load Andorra data (one of the smallest data sets)::
 
-	./OpenNameSearch.sh http://download.geofabrik.de/north-america/us/delaware-latest.osm.pbf
+	./OpenNameSearch.sh https://download.geofabrik.de/europe/andorra-latest.osm.pbf
 
 Welcome Page
 ------------
 
-Once installation completes, navigate to the IP/nominatim or hostname/nominatim on your server.
+Once installation completes, navigate to the IP or hostname on your server.
 
 You should see a page as below:
 
-.. image:: docs/OpenNameSearch-Main.png
+.. image:: OpenNameSearch-Main.png
 
+
+Click the Search function (or go to domain.com/search.html)
+
+You should see a page as below:
+
+.. image:: OpenNameSearch-Search.png
+
+To test functionality, enter below into the Search box::
+
+	AD500 Andorra la Vella, Andorra
+
+Confirm that results are returned
+	
+.. image:: Search-Results.png
 
 Loading and Reloading PBFs
 --------------------------

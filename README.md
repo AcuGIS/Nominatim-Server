@@ -31,9 +31,9 @@ The pbf_url is the complete PBF url from GeoFarbrik
 
 ## Examples:
 
-Load Delware data:
+Load Andorra data (one of the smallest data sets, good for testing):
 
-<code>./OpenNameSearch.sh http://download.geofabrik.de/north-america/us/delaware-latest.osm.pbf </code>
+      ./OpenNameSearch.sh http://download.geofabrik.de/north-america/us/delaware-latest.osm.pbf](https://download.geofabrik.de/europe/andorra-latest.osm.pbf
 
 ## Welcome Page
 
@@ -41,11 +41,23 @@ Once installation completes, navigate to the IP or hostname on your server.
 
 You should see a page as below:
 
-![installation complete](docs/OpenNameSearch-Main.png)
+![OpenNameSearch](docs/OpenNameSearch-Main.png)
 
-Click Search to start a search:
+Click the Search function (or go to domain.com/search.html)
 
-![Search Function](docs/OpenNameSearch-Search.png)
+You should see a page as below:
+
+![OpenNameSearch](docs/OpenNameSearch-Search.png)
+
+To test functionality, enter below into the Search box::
+
+	AD500 Andorra la Vella, Andorra
+
+Confirm that results are returned
+
+
+![OpenNameSearch](docs/Search-Results.png)
+	
 
 
 ## Loading Additional PBFs, Multiplie PBFs, or Replacing Existing PBFs:
