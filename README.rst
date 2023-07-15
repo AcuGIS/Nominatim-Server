@@ -24,19 +24,33 @@ Step 3: Run the script::
 Examples
 ------------
 
-Load Delware data::
+Load Andorra data (one of the smallest data sets)::
 
-	./OpenNameSearch.sh http://download.geofabrik.de/north-america/us/delaware-latest.osm.pbf
+	./OpenNameSearch.sh https://download.geofabrik.de/europe/andorra-latest.osm.pbf
 
 Welcome Page
 ------------
 
-Once installation completes, navigate to the IP/nominatim or hostname/nominatim on your server.
+Once installation completes, navigate to the IP or hostname on your server.
 
 You should see a page as below:
 
 .. image:: docs/OpenNameSearch-Main.png
 
+
+Click the Search function (or go to domain.com/search.html)
+
+You should see a page as below:
+
+.. image:: docs/OpenNameSearch-Search.png
+
+To test functionality, enter below into the Search box::
+
+	AD500 Andorra la Vella, Andorra
+
+Confirm that results are returned
+	
+.. image:: docs/Search-Results.png
 
 Loading and Reloading PBFs
 --------------------------
