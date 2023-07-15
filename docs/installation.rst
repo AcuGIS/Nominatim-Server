@@ -1,4 +1,4 @@
-Installation
+Installation and Usage
 ===========================
 This script is for building a basic Nominatim server with OpenStreetMap data.
 
