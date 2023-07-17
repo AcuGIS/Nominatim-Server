@@ -13,11 +13,11 @@ Only for use on a clean Ubuntu 22!
 
 Step 1: Get the OpenNameSearch.sh script from GitHub
 
-      wget https://raw.githubusercontent.com/AcuGIS/OpenNameSearch/master/OpenNameSearch.sh
+      wget https://raw.githubusercontent.com/AcuGIS/Nominatim-Server/master/Nominatim-Server.sh
 
 Step 2: Make it executable:
 
-    chmod 755 OpenNameSearch.sh
+    chmod 755 Nominatim-Server.sh
 
 Step 3: Run the script
 
@@ -25,7 +25,7 @@ Step 3: Run the script
 
 The script accepts a PBF url:
 
-    ./OpenNameSearch.sh  pbf_url
+    ./Nominatim-Server.sh  pbf_url
 
 The pbf_url is the complete PBF url from GeoFarbrik
 
@@ -33,7 +33,7 @@ The pbf_url is the complete PBF url from GeoFarbrik
 
 Load Andorra data from GeoFabrik (one of the smallest data sets, good for testing):
 
-      ./OpenNameSearch.sh https://download.geofabrik.de/europe/andorra-latest.osm.pbf
+      ./Nominatim-Server.sh https://download.geofabrik.de/europe/andorra-latest.osm.pbf
 
 
 ## Welcome Page
@@ -63,11 +63,11 @@ Confirm that results are returned
 
 ## Loading Additional PBFs, Multiplie PBFs, or Replacing Existing PBFs:
 
-You can use our reload-OpenNameSearch.sh script via GitHUB script.
+You can use our reload-Nominatim-Server.sh script via GitHUB script.
 
 Usage is:
 <code>	
-./reload-OpenNameSearch.sh [PBF_URL1] ...
+./reload-Nominatim-Server.sh [PBF_URL1] ...
 </code>
 
 ## Enable Automatic Updates
