@@ -11,15 +11,15 @@ Running the Script
 
 Step 1: Get the OpenNameSearch.sh script from GitHub::
 
-	wget https://raw.githubusercontent.com/AcuGIS/OpenNameSearch/master/OpenNameSearch.sh
+	wget https://raw.githubusercontent.com/AcuGIS/Nominatim Server/master/Nominatim Server.sh
 
 Step 2: Make it executable::
 
-	chmod 755 OpenNameSearch.sh
+	chmod 755 Nominatim Server.sh
 
 Step 3: Run the script::
 
-	./OpenNameSearch pbf_url
+	./Nominatim Server pbf_url
 
 Examples
 ------------
@@ -59,7 +59,7 @@ You can use our reload-OpenNameSearch.sh script via GitHUB script.
 
 Usage is::
 
-	./reload-OpenNameSearch.sh [PBF_URL1] [PBF_URL2] ...
+	./reload-Nominatim Server.sh [PBF_URL1] [PBF_URL2] ...
 
 
 Enable Automatic Updates
