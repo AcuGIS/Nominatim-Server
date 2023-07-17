@@ -1,6 +1,6 @@
 # Nominatim Server
 
-![OpenNameSearch](docs/OpenNameSearch-Main.png)
+![OpenNameSearch](docs/Nominatim-Server.png)
 
 * Project page: https://www.acugis.com/opennamesearch
 * Documentation: https://www.acugis.com/opennamesearch/docs/
@@ -42,7 +42,7 @@ Once installation completes, navigate to the IP or hostname on your server.
 
 You should see a page as below:
 
-![OpenNameSearch](docs/OpenNameSearch-Main.png)
+![OpenNameSearch](docs/Nominatim-Server.png)
 
 Click the Search function (or go to domain.com/search.html)
 
