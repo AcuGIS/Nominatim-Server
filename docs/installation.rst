@@ -35,7 +35,7 @@ Once installation completes, navigate to the IP or hostname on your server.
 
 You should see a page as below:
 
-.. image:: OpenNameSearch-Main.png
+.. image:: Nominatim-Server.png
 
 
 Click the Search function (or go to domain.com/search.html)
