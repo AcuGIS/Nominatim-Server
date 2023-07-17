@@ -1,4 +1,4 @@
-# OpenNameSearch
+# Nominatim Server
 
 ![OpenNameSearch](docs/OpenNameSearch-Main.png)
 
