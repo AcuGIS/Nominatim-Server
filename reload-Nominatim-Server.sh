@@ -1,7 +1,7 @@
 #!/bin/bash -e
 #For use on existing Nominatim Server created via OpenNameSearch.sh
 #Cited, Inc
-#Usage: reload-OpenNameSearch.sh [PBF_URL1] ...
+#Usage: reload-Nominatim-Server.sh [PBF_URL1] ...
 
 #NOTE: Script will drop old nominatim database and import new data.
 
