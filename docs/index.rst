@@ -6,7 +6,7 @@
 OpenNameSearch
 ==================================================
 
-.. image:: OpenNameSearch-Main.png
+.. image:: Nominatim-Server.png
 
 .. toctree::
    :caption: Getting Started
