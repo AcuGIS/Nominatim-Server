@@ -1,10 +1,9 @@
 #!/bin/bash -e
-#Version: 2.0.0
+#Version: 3.1.0
 #For use on clean Ubuntu 22 only!!!
 #Cited, Inc https://www.citedcorp.com
-# Ubuntu 16 support by Christopher Flanagan https://www.flana.com
 #Usage Example for State of Delaware:
-#./OpenNameSearch.sh http://download.geofabrik.de/north-america/us/delaware-latest.osm.pbf
+#./Nominatim-Server.sh http://download.geofabrik.de/north-america/us/delaware-latest.osm.pbf
 #NOTE: It is best to run this via the screen command as it takes some time to finish.
 
 PBF_URL="${1}";	#get URL from first parameter, http://download.geofabrik.de/europe/germany-latest.osm.pbf
@@ -127,9 +126,9 @@ function install_nominatim_ui(){
 		#Add webapp
   		mv nominatim-ui-${NMUI_VER}/dist/* /var/www/html/
 		rm -f /var/www/html/index.html
-		wget --quiet -P/tmp https://github.com/AcuGIS/OpenNameSearch/archive/refs/heads/master.zip
+		wget --quiet -P/tmp https://github.com/AcuGIS/Nominatim-Server/archive/refs/heads/master.zip
 		unzip /tmp/master.zip -d/tmp
-		cp -r /tmp/OpenNameSearch-master/app/* /var/www/html/
+		cp -r /tmp/Nominatim-Server-master/app/* /var/www/html/
 		rm -rf /tmp/master.zip
         	#sed -i.save "s/localhost/${HNAME}/" /var/www/html/leaflet-example.html
 
