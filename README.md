@@ -11,7 +11,7 @@ This script is for building a Nominatim server with OpenStreetMap data.
 
 Only for use on a clean Ubuntu 22!
 
-Step 1: Get the OpenNameSearch.sh script from GitHub
+Step 1: Get the Nominatim-Server.sh script from GitHub
 
       wget https://raw.githubusercontent.com/AcuGIS/Nominatim-Server/master/Nominatim-Server.sh
 
