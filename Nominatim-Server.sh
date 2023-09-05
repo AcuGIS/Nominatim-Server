@@ -74,7 +74,7 @@ function install_prerequisites(){
         postgresql-server-dev-${PG_VER} postgresql-${PG_VER}-postgis-${PGIS_VER} postgresql-contrib-${PG_VER} \
         apache2 php php-{cgi,cli,intl,pgsql,pear,db} libapache2-mod-php \
 				libicu-dev python3-dotenv python3-psycopg2 python3-psutil python3-jinja2 python3-icu python3-datrie \
-        git python-pip python3-pyosmium osmosis libboost-python-dev
+        git python-pip python3-pyosmium osmosis libboost-python-dev nlohmann-json3-dev
 }
 
 function install_nominatim(){
