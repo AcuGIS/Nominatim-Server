@@ -216,7 +216,7 @@ wget -O /home/${NM_USER}/Nominatim/data/country_osm_grid.sql.gz http://www.nomin
 nominatim import -j ${NP} --osm-file ${PBF_FILE} --osm2pgsql-cache ${C_MEM} --project-dir /var/www/${PROJECT_NAME} 2>&1 | tee /tmp/setup.log
 EOF
 		
-		rm -f ${PDB_FILE}
+		rm -f ${PBF_FILE}
 	popd
 	
 	chown -R www-data:www-data /var/www/${PROJECT_NAME}
