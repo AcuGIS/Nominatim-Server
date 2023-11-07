@@ -73,12 +73,11 @@ function install_prerequisites(){
         libbz2-dev libpq-dev liblua5.3-dev lua5.3 libgeos-dev libgeos++-dev libproj-dev \
         postgresql-server-dev-${PG_VER} postgresql-${PG_VER}-postgis-${PGIS_VER} postgresql-contrib-${PG_VER} \
         apache2 php php-{cgi,cli,intl,pgsql,pear,db} libapache2-mod-php \
-				libicu-dev python3-dotenv python3-psycopg2 python3-psutil python3-jinja2 python3-icu python3-datrie \
+				libicu-dev python3-{dotenv,psycopg2,psutil,jinja2,icu,datrie,sqlalchemy,asyncpg} \
         git python-pip python3-pyosmium osmosis libboost-python-dev nlohmann-json3-dev
 }
 
 function install_nominatim(){
-	NM_VER='4.2.3'
 	
     #download
     pushd /home/${NM_USER}
@@ -86,7 +85,7 @@ function install_nominatim(){
 			
 	    #compile
 	    pushd Nominatim
-				git checkout v4.2.3
+				git checkout v4.3.1
 	    	
 				wget -O data/country_osm_grid.sql.gz https://www.nominatim.org/data/country_grid.sql.gz
 				
@@ -109,7 +108,7 @@ EOF
 }
 
 function install_nominatim_ui(){
-	NMUI_VER='3.3.0'
+	NMUI_VER='3.4.0'
 	
 	pushd /home/${NM_USER}
 	
