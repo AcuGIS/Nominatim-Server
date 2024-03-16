@@ -85,7 +85,7 @@ function install_nominatim(){
 			
 	    #compile
 	    pushd Nominatim
-				git checkout v4.3.1
+				git checkout v4.4.0
 	    	
 				wget -O data/country_osm_grid.sql.gz https://www.nominatim.org/data/country_grid.sql.gz
 				
@@ -108,7 +108,7 @@ EOF
 }
 
 function install_nominatim_ui(){
-	NMUI_VER='3.4.0'
+	NMUI_VER='3.5.1'
 	
 	pushd /home/${NM_USER}
 	
