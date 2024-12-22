@@ -73,8 +73,10 @@ function install_prerequisites(){
         libbz2-dev libpq-dev liblua5.3-dev lua5.3 libgeos-dev libgeos++-dev libproj-dev \
         postgresql-server-dev-${PG_VER} postgresql-${PG_VER}-postgis-${PGIS_VER} postgresql-contrib-${PG_VER} \
         apache2 php php-{cgi,cli,intl,pgsql,pear,db} libapache2-mod-php \
-				libicu-dev python3-{dotenv,psycopg2,psutil,jinja2,icu,datrie,sqlalchemy,asyncpg} \
-        git python-pip python3-pyosmium osmosis libboost-python-dev nlohmann-json3-dev
+				libicu-dev python3-{dotenv,psycopg2,psutil,jinja2,icu,datrie,sqlalchemy,asyncpg,pip,pyosmium} \
+        git osmosis libboost-python-dev nlohmann-json3-dev
+		
+		pip3 install psycopg
 }
 
 function install_nominatim(){
@@ -85,10 +87,11 @@ function install_nominatim(){
 			
 	    #compile
 	    pushd Nominatim
-				git checkout v4.4.0
+				git checkout v4.5.0
+				git submodule update --init
 	    	
 				wget -O data/country_osm_grid.sql.gz https://www.nominatim.org/data/country_grid.sql.gz
-				
+
 				mkdir build
 				pushd build
 			    cmake -DCMAKE_INSTALL_PREFIX=/usr ..
@@ -108,7 +111,7 @@ EOF
 }
 
 function install_nominatim_ui(){
-	NMUI_VER='3.5.1'
+	NMUI_VER='3.6.1'
 	
 	pushd /home/${NM_USER}
 	
