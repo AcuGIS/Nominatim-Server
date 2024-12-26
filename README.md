@@ -9,7 +9,7 @@
 
 This script is for building a Nominatim server with OpenStreetMap data.
 
-Only for use on a clean Ubuntu 22!
+Only for use on a clean Ubuntu 22 and 24!
 
 Step 1: Get the Nominatim-Server.sh script from GitHub
 
@@ -17,7 +17,7 @@ Step 1: Get the Nominatim-Server.sh script from GitHub
 
 Step 2: Make it executable:
 
-    chmod 755 Nominatim-Server.sh
+    chmod 755 Nominatim-Server-22.sh
 
 Step 3: Run the script
 
@@ -25,7 +25,7 @@ Step 3: Run the script
 
 The script accepts a PBF url:
 
-    ./Nominatim-Server.sh  pbf_url
+    ./Nominatim-Server-22.sh  pbf_url
 
 The pbf_url is the complete PBF url from GeoFarbrik
 
@@ -33,7 +33,7 @@ The pbf_url is the complete PBF url from GeoFarbrik
 
 Load Andorra data from GeoFabrik (one of the smallest data sets, good for testing):
 
-      ./Nominatim-Server.sh https://download.geofabrik.de/europe/andorra-latest.osm.pbf
+      ./Nominatim-Server-22.sh https://download.geofabrik.de/europe/andorra-latest.osm.pbf
 
 
 ## Welcome Page

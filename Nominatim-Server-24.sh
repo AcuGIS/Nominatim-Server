@@ -14,7 +14,7 @@ NM_USER='ntim';	#nominatim website
 NM_PG_PASS=$(< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c32);
 HNAME=$(hostname -f)
 
-PG_VER='14'
+PG_VER='16'
 PGIS_VER='3'
 
 function install_postgresql(){
@@ -50,12 +50,12 @@ CMD_EOF
     #6. Configure ph_hba.conf
     cat >/etc/postgresql/${PG_VER}/main/pg_hba.conf <<CMD_EOF
 local	all all 							trust
-host	all all 127.0.0.1	255.255.255.255	md5
-host	all all 0.0.0.0/0					md5
-host	all all ::1/128						md5
-hostssl all all 127.0.0.1	255.255.255.255	md5
-hostssl all all 0.0.0.0/0					md5
-hostssl all all ::1/128						md5
+host	all all 127.0.0.1	255.255.255.255	trust
+host	all all 0.0.0.0/0					scram-sha-256
+host	all all ::1/128						scram-sha-256
+hostssl all all 127.0.0.1	255.255.255.255	scram-sha-256
+hostssl all all 0.0.0.0/0					scram-sha-256
+hostssl all all ::1/128						scram-sha-256
 CMD_EOF
     sed -i.save "s/.*listen_addresses.*/listen_addresses = '*'/" /etc/postgresql/${PG_VER}/main/postgresql.conf
 
@@ -73,10 +73,8 @@ function install_prerequisites(){
         libbz2-dev libpq-dev liblua5.3-dev lua5.3 libgeos-dev libgeos++-dev libproj-dev \
         postgresql-server-dev-${PG_VER} postgresql-${PG_VER}-postgis-${PGIS_VER} postgresql-contrib-${PG_VER} \
         apache2 php php-{cgi,cli,intl,pgsql,pear,db} libapache2-mod-php \
-				libicu-dev python3-{dotenv,psycopg2,psutil,jinja2,icu,datrie,sqlalchemy,asyncpg,pip,pyosmium} \
+				libicu-dev python3-{dotenv,psycopg,psutil,jinja2,icu,datrie,sqlalchemy,asyncpg,pip,pyosmium} \
         git osmosis libboost-python-dev nlohmann-json3-dev
-		
-		pip3 install psycopg
 }
 
 function install_nominatim(){
@@ -272,6 +270,7 @@ touch /root/auth.txt
 export DEBIAN_FRONTEND=noninteractive
 
 apt-get -y update
+apt-get -y install wget unzip
 
 setup_nm_user;
 install_prerequisites;
