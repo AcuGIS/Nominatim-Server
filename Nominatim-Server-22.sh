@@ -57,7 +57,6 @@ hostssl all all 127.0.0.1	255.255.255.255	md5
 hostssl all all 0.0.0.0/0					md5
 hostssl all all ::1/128						md5
 CMD_EOF
-    sed -i.save "s/.*listen_addresses.*/listen_addresses = '*'/" /etc/postgresql/${PG_VER}/main/postgresql.conf
 
     #10. Create Symlinks for Backward Compatibility
     mkdir -p /var/lib/pgsql
