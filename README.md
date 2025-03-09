@@ -13,7 +13,7 @@ Only for use on a clean Ubuntu 22 and 24!
 
 Step 1: Get the Nominatim-Server.sh script from GitHub
 
-      wget https://raw.githubusercontent.com/AcuGIS/Nominatim-Server/master/Nominatim-Server.sh
+      wget https://raw.githubusercontent.com/AcuGIS/Nominatim-Server/master/Nominatim-Server-22.sh
 
 Step 2: Make it executable:
 
